@@ -103,3 +103,43 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+
+### Steps to validate the correctness of the assignment:
+(not a required but added to assist in peer grading...)
+
+#### Steps to execute: 
+
+<!-- -->
+
+```
+
+  1. > a <- makeCacheMatrix(matrix (c(1:4), nrow=2, ncol=2))  - Initializing
+  
+  2. > a$get()
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+
+  3. > a$getInverse()   - Nothing is set as yet
+NULL
+  
+  4. > a$set(matrix(c(1:4), nrows = 2, ncols=2)) - Set the matrix to a value
+  
+  5. > aInv <- solve(a$get())     - Set the inverse of a
+> aInv
+
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+
+(Validate if aInv is correct. Matrix multiply a and aInv and it should give the identity matrix)
+
+7. > a$get()%*%aInv
+
+     [,1] [,2]
+[1,]    1    0
+[2,]    0    1
+  
+```
+
